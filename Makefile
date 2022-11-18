@@ -6,7 +6,7 @@
 #    By: ladloff <ladloff@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/27 09:35:17 by ladloff           #+#    #+#              #
-#    Updated: 2022/11/10 16:19:16 by ladloff          ###   ########.fr        #
+#    Updated: 2022/11/17 17:55:43 by ladloff          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -52,6 +52,7 @@ SRCS =	ft_isalpha.c			\
 		ft_strtrim.c			\
 		ft_split.c				\
 		ft_itoa.c				\
+		ft_uitoa.c				\
 		ft_strmapi.c			\
 		ft_striteri.c			\
 		ft_putchar_fd.c			\
