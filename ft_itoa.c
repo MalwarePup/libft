@@ -6,7 +6,7 @@
 /*   By: ladloff <ladloff@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/25 20:21:04 by ladloff           #+#    #+#             */
-/*   Updated: 2022/12/27 17:55:19 by ladloff          ###   ########.fr       */
+/*   Updated: 2022/12/27 18:02:00 by ladloff          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ static char	*ft_int_to_char(char *str, long nb, int i)
 char	*ft_itoa(int n)
 {
 	int		i;
-	long	nb;
+	int		nb;
 	char	*str;
 
 	nb = n;
