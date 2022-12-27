@@ -6,7 +6,7 @@
 #    By: ladloff <ladloff@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/27 09:35:17 by ladloff           #+#    #+#              #
-#    Updated: 2022/11/17 17:55:43 by ladloff          ###   ########.fr        #
+#    Updated: 2022/12/27 20:53:11 by ladloff          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,6 +29,7 @@ SRCS =	ft_isalpha.c			\
 		ft_isalnum.c			\
 		ft_isascii.c			\
 		ft_isprint.c			\
+		ft_isspace.c			\
 		ft_strlen.c				\
 		ft_memset.c				\
 		ft_bzero.c				\
