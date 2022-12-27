@@ -6,46 +6,37 @@
 /*   By: ladloff <ladloff@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/02 20:23:49 by ladloff           #+#    #+#             */
-/*   Updated: 2022/11/09 17:52:37 by ladloff          ###   ########.fr       */
+/*   Updated: 2022/12/27 13:46:51 by ladloff          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static size_t	ft_len_ulong(unsigned long n)
-{
-	size_t	len;
-
-	len = (n <= 0);
-	while (n)
-	{
-		n /= 10;
-		len++;
-	}
-	return (len);
-}
-
 char	*ft_uitoa(unsigned int n)
 {
-	size_t	i;
-	long	nb;
-	char	*str;
+	size_t		i;
+	char		*str;
+	const char	digits[10] = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9'};
 
-	nb = n;
-	i = ft_len_ulong(n);
+	i = 0;
+	while (n > 0)
+	{
+		n /= 10;
+		i++;
+	}
 	str = malloc((i + 1) * sizeof(char));
 	if (!str)
 		return (NULL);
 	str[i--] = '\0';
-	if (nb == 0)
+	if (n == 0)
 	{
 		str[0] = 48;
 		return (str);
 	}
-	while (nb > 0)
+	while (n > 0)
 	{
-		str[i--] = 48 + (nb % 10);
-		nb /= 10;
+		str[i--] = digits[n % 10];
+		n /= 10;
 	}
 	return (str);
 }
