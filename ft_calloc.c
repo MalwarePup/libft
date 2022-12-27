@@ -6,7 +6,7 @@
 /*   By: ladloff <ladloff@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/21 10:03:59 by ladloff           #+#    #+#             */
-/*   Updated: 2022/12/27 18:44:37 by ladloff          ###   ########.fr       */
+/*   Updated: 2022/12/27 21:03:57 by ladloff          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,8 @@ void	*ft_calloc(size_t count, size_t size)
 		return (NULL);
 	total_size = count * size;
 	p = malloc(total_size);
-		if (!p)
-			return (NULL);
+	if (!p)
+		return (NULL);
 	ft_bzero(p, total_size);
 	return (p);
 }
