@@ -6,103 +6,81 @@
 #    By: ladloff <ladloff@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/27 09:35:17 by ladloff           #+#    #+#              #
-#    Updated: 2022/11/10 16:19:16 by ladloff          ###   ########.fr        #
+#    Updated: 2023/03/04 23:43:44 by ladloff          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-#==============================================================================#
-# Macros                                                                       #
-#==============================================================================#
+NAME		=	libft.a
+CFLAGS		=	-Wall -Wextra -Werror
 
-# Main
+SRCS		=	ft_isalpha.c \
+				ft_isdigit.c \
+				ft_isalnum.c \
+				ft_isascii.c \
+				ft_isprint.c \
+				ft_isspace.c \
+				ft_strlen.c \
+				ft_memset.c \
+				ft_bzero.c \
+				ft_memcpy.c \
+				ft_memmove.c \
+				ft_strlcpy.c \
+				ft_strlcat.c \
+				ft_toupper.c \
+				ft_tolower.c \
+				ft_strchr.c \
+				ft_strrchr.c \
+				ft_strncmp.c \
+				ft_memchr.c \
+				ft_memcmp.c \
+				ft_strnstr.c \
+				ft_atoi.c \
+				ft_calloc.c \
+				ft_strdup.c \
+				ft_substr.c \
+				ft_strjoin.c \
+				ft_strtrim.c \
+				ft_split.c \
+				ft_itoa.c \
+				ft_uitoa.c \
+				ft_strmapi.c \
+				ft_striteri.c \
+				ft_putchar_fd.c \
+				ft_putstr_fd.c \
+				ft_putendl_fd.c \
+				ft_putnbr_fd.c
 
-NAME = libft.a
+SRCS_BONUS	=	ft_lstnew.c \
+				ft_lstadd_front.c	\
+				ft_lstsize.c \
+				ft_lstlast.c \
+				ft_lstadd_back.c \
+				ft_lstdelone.c \
+				ft_lstclear.c \
+				ft_lstiter.c \
+				ft_lstmap.c
 
-CC = cc
-
-CFLAGS = -Wall -Wextra -Werror
-
-# Sources
-
-SRCS =	ft_isalpha.c			\
-		ft_isdigit.c			\
-		ft_isalnum.c			\
-		ft_isascii.c			\
-		ft_isprint.c			\
-		ft_strlen.c				\
-		ft_memset.c				\
-		ft_bzero.c				\
-		ft_memcpy.c				\
-		ft_memmove.c			\
-		ft_strlcpy.c			\
-		ft_strlcat.c			\
-		ft_toupper.c			\
-		ft_tolower.c			\
-		ft_strchr.c				\
-		ft_strrchr.c			\
-		ft_strncmp.c			\
-		ft_memchr.c				\
-		ft_memcmp.c				\
-		ft_strnstr.c			\
-		ft_atoi.c				\
-		ft_calloc.c				\
-		ft_strdup.c				\
-		ft_substr.c				\
-		ft_strjoin.c			\
-		ft_strtrim.c			\
-		ft_split.c				\
-		ft_itoa.c				\
-		ft_strmapi.c			\
-		ft_striteri.c			\
-		ft_putchar_fd.c			\
-		ft_putstr_fd.c			\
-		ft_putendl_fd.c			\
-		ft_putnbr_fd.c
-
-SRCS_BONUS = ft_lstnew.c		\
-			ft_lstadd_front.c	\
-			ft_lstsize.c		\
-			ft_lstlast.c		\
-			ft_lstadd_back.c	\
-			ft_lstdelone.c		\
-			ft_lstclear.c		\
-			ft_lstiter.c		\
-			ft_lstmap.c
-
-# Objects
-
-OBJS = ${SRCS:.c=.o}
-
-OBJS_BONUS = ${SRCS_BONUS:.c=.o}
-
-# Others
-
-RM = rm -rf
-
-AR = ar -rc
-
-#==============================================================================#
-# Rules                                                                        #
-#==============================================================================#
+OBJS		=	$(SRCS:.c=.o)
+OBJS_BONUS	=	$(SRCS_BONUS:.c=.o)
 
 .c.o:
-	${CC} ${CFLAGS} -c $< -o ${<:.c=.o}
+	@$(CC) $(CFLAGS) -c $< -o $@
 
-$(NAME): ${OBJS}
-	@${AR} ${NAME} ${OBJS}
+$(NAME): $(OBJS)
+	@ar rcs $(NAME) $(OBJS)
 
-all: ${NAME}
+all: $(NAME)
 
 clean:
-	@${RM} ${OBJS} ${OBJS_BONUS}
+	@rm -rf $(OBJS) $(OBJS_BONUS)
 
 fclean: clean
-	@${RM} ${NAME}
+	@rm -rf $(NAME)
 
 re: fclean all
 
-bonus: ${OBJS} ${OBJS_BONUS}
-	@${AR} ${NAME} ${OBJS} ${OBJS_BONUS}
+bonus: $(OBJS) $(OBJS_BONUS)
+	ar rcs $(NAME) $(OBJS) $(OBJS_BONUS)
 
 rebonus: fclean bonus
 
