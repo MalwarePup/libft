@@ -6,7 +6,7 @@
 /*   By: ladloff <ladloff@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/20 23:32:40 by ladloff           #+#    #+#             */
-/*   Updated: 2022/10/30 09:06:43 by ladloff          ###   ########.fr       */
+/*   Updated: 2022/12/27 20:54:30 by ladloff          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int	ft_atoi(const char *str)
 	int		res;
 	int		sign;
 
-	while (*str == 32 || (*str >= 9 && *str <= 13))
+	while (ft_isspace(*str))
 		str++;
 	sign = 1;
 	if (*str == '-' || *str == '+')
