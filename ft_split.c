@@ -6,11 +6,22 @@
 /*   By: ladloff <ladloff@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/25 13:46:01 by ladloff           #+#    #+#             */
-/*   Updated: 2022/11/10 15:46:01 by ladloff          ###   ########.fr       */
+/*   Updated: 2023/02/20 13:25:08 by ladloff          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+static char	**ft_free(char **str)
+{
+	char	**original_str;
+
+	original_str = str;
+	while (*str)
+		free(*str++);
+	free(original_str);
+	return (NULL);
+}
 
 static size_t	ft_check_separator(char c, char charset)
 {
@@ -53,14 +64,6 @@ static char	*ft_word(const char *s, char c)
 		word[i] = s[i];
 	word[i] = '\0';
 	return (word);
-}
-
-static char	**ft_free(char **str)
-{
-	while (*str)
-		free(*str++);
-	free(str);
-	return (NULL);
 }
 
 char	**ft_split(char const *s, char c)
