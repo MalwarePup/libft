@@ -6,43 +6,54 @@
 /*   By: ladloff <ladloff@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/25 13:26:41 by ladloff           #+#    #+#             */
-/*   Updated: 2022/10/30 15:42:43 by ladloff          ###   ########.fr       */
+/*   Updated: 2023/03/01 00:43:40 by ladloff          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	ft_is_in_set(const char *set, char c)
+static size_t	get_prefix_length(const char *s1, const char *set)
 {
-	size_t	i;
+	size_t	len_prefix;
 
-	i = -1;
-	while (set[++i])
-		if (set[i] == c)
-			return (1);
-	return (0);
+	len_prefix = 0;
+	while (*s1 && ft_strchr(set, *s1) && ++len_prefix)
+		++s1;
+	return (len_prefix);
+}
+
+static size_t	get_suffix_length(const char *s1, const char *set,
+		size_t len_total, size_t len_prefix)
+{
+	size_t		len_suffix;
+	const char	*end;
+	const char	*suffix_end;
+
+	len_suffix = 0;
+	end = s1 + len_total;
+	suffix_end = end;
+	while (suffix_end > s1 + len_prefix && ft_strchr(set, *(suffix_end - 1))
+		&& ++len_suffix)
+		--suffix_end;
+	return (len_suffix);
 }
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	size_t	i;
-	size_t	j;
 	size_t	len_total;
+	size_t	len_prefix;
+	size_t	len_suffix;
 	char	*str;
 
 	if (!s1 || !set)
 		return (NULL);
-	i = -1;
-	while (s1[++i] && ft_is_in_set(set, s1[i]))
-		;
-	j = ft_strlen(s1);
-	while (i < --j && ft_is_in_set(set, s1[j]))
-		;
-	str = malloc((j - i + 2) * sizeof(char));
+	len_total = ft_strlen(s1);
+	len_prefix = get_prefix_length(s1, set);
+	len_suffix = get_suffix_length(s1, set, len_total, len_prefix);
+	str = malloc(len_total - len_prefix - len_suffix + 1);
 	if (!str)
 		return (NULL);
-	len_total = (j - i + 1);
-	ft_memmove(str, s1 + i, len_total);
-	str[len_total] = '\0';
+	ft_memcpy(str, s1 + len_prefix, len_total - len_prefix - len_suffix);
+	str[len_total - len_prefix - len_suffix] = '\0';
 	return (str);
 }
