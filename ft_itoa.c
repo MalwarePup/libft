@@ -6,27 +6,16 @@
 /*   By: ladloff <ladloff@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/25 20:21:04 by ladloff           #+#    #+#             */
-/*   Updated: 2022/10/29 19:20:24 by ladloff          ###   ########.fr       */
+/*   Updated: 2022/12/27 18:02:00 by ladloff          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static size_t	ft_get_len(int n)
+static char	*ft_int_to_char(char *str, long nb, int i)
 {
-	size_t	len;
+	const char	digits[10] = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9'};
 
-	len = (n <= 0);
-	while (n)
-	{
-		n /= 10;
-		len++;
-	}
-	return (len);
-}
-
-static char	*ft_int_to_char(char *str, long nb, size_t i)
-{
 	str[i--] = '\0';
 	if (nb == 0)
 	{
@@ -40,7 +29,7 @@ static char	*ft_int_to_char(char *str, long nb, size_t i)
 	}
 	while (nb > 0)
 	{
-		str[i--] = 48 + (nb % 10);
+		str[i--] = digits[nb % 10];
 		nb /= 10;
 	}
 	return (str);
@@ -48,15 +37,20 @@ static char	*ft_int_to_char(char *str, long nb, size_t i)
 
 char	*ft_itoa(int n)
 {
-	size_t	i;
-	long	nb;
+	int		i;
+	int		nb;
 	char	*str;
 
 	nb = n;
-	i = ft_get_len(n);
+	i = (nb <= 0);
+	while (nb != 0)
+	{
+		nb /= 10;
+		i++;
+	}
 	str = malloc((i + 1) * sizeof(char));
 	if (!str)
 		return (NULL);
-	str = ft_int_to_char(str, nb, i);
+	str = ft_int_to_char(str, n, i);
 	return (str);
 }
