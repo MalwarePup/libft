@@ -6,7 +6,7 @@
 #    By: ladloff <ladloff@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/27 09:35:17 by ladloff           #+#    #+#              #
-#    Updated: 2023/03/04 23:43:44 by ladloff          ###   ########.fr        #
+#    Updated: 2023/03/30 19:25:21 by ladloff          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -35,6 +35,7 @@ SRCS		=	ft_isalpha.c \
 				ft_memcmp.c \
 				ft_strnstr.c \
 				ft_atoi.c \
+				ft_latoi.c \
 				ft_calloc.c \
 				ft_strdup.c \
 				ft_substr.c \
