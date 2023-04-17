@@ -6,7 +6,7 @@
 #    By: ladloff <ladloff@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/03 18:56:12 by ladloff           #+#    #+#              #
-#    Updated: 2023/04/10 10:42:50 by ladloff          ###   ########.fr        #
+#    Updated: 2023/04/17 14:13:41 by ladloff          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,7 +23,7 @@ OBJS	:=	$(patsubst $(SRC_DIR)/%.c,$(OBJ_DIR)/%.o,$(SRCS))
 CFLAGS	:=	-Wall -Wextra -Werror $(INCS)
 
 $(OBJ_DIR)/%.o: $(SRC_DIR)/%.c
-	mkdir -p $(dir $@)
+	@mkdir -p $(dir $@)
 	$(CC) $(CFLAGS) -c $< -o $@
 
 $(NAME): $(OBJS)
@@ -32,11 +32,11 @@ $(NAME): $(OBJS)
 all: $(NAME)
 
 clean:
-	rm -rf $(OBJS)
+	@rm -rf $(OBJS)
 
 fclean: clean
-	rm -rf $(OBJ_DIR)
-	rm -rf $(NAME)
+	@rm -rf $(OBJ_DIR)
+	@rm -rf $(NAME)
 
 re: fclean all
 
