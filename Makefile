@@ -6,7 +6,7 @@
 #    By: ladloff <ladloff@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/03 18:56:12 by ladloff           #+#    #+#              #
-#    Updated: 2023/04/17 14:13:41 by ladloff          ###   ########.fr        #
+#    Updated: 2023/04/25 11:27:24 by ladloff          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ SRC_DIR	?=	./src
 OBJ_DIR	?=	./obj
 INC_DIR	?=	./include
 
-SRCS	:=	$(shell find $(SRC_DIR) -name *.c)
+SRCS	:=	$(wildcard $(SRC_DIR)/*.c)
 INCS	:=	$(addprefix -I, $(INC_DIR))
 OBJS	:=	$(patsubst $(SRC_DIR)/%.c,$(OBJ_DIR)/%.o,$(SRCS))
 
