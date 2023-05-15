@@ -6,12 +6,12 @@
 /*   By: ladloff <ladloff@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/06 22:25:01 by ladloff           #+#    #+#             */
-/*   Updated: 2023/05/13 19:07:44 by ladloff          ###   ########.fr       */
+/*   Updated: 2023/05/15 13:57:30 by ladloff          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
-#include "../include/libft.h"
+#include "libft.h"
 
 void	*ft_realloc(void *ptr, size_t current_size, size_t new_size)
 {
