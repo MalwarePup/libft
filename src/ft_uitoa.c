@@ -6,7 +6,7 @@
 /*   By: ladloff <ladloff@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/02 20:23:49 by ladloff           #+#    #+#             */
-/*   Updated: 2023/02/28 23:31:44 by ladloff          ###   ########.fr       */
+/*   Updated: 2023/05/22 02:14:41 by ladloff          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ char	*ft_uitoa(unsigned int n)
 	buffer[buffer_size] = '\0';
 	while (--buffer_size >= 0)
 	{
-		buffer[buffer_size] = '0' + (n % 10);
+		buffer[buffer_size] = (char)('0' + (n % 10));
 		n /= 10;
 	}
 	return (buffer);
