@@ -6,7 +6,7 @@
 /*   By: ladloff <ladloff@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/20 23:32:40 by ladloff           #+#    #+#             */
-/*   Updated: 2023/03/30 19:24:11 by ladloff          ###   ########.fr       */
+/*   Updated: 2023/05/22 02:28:29 by ladloff          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 long	ft_latoi(const char *str)
 {
 	long	res;
-	char	sign;
+	int		sign;
 
 	while (ft_isspace(*str))
 		str++;
