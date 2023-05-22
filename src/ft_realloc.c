@@ -6,7 +6,7 @@
 /*   By: ladloff <ladloff@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/06 22:25:01 by ladloff           #+#    #+#             */
-/*   Updated: 2023/05/15 13:57:30 by ladloff          ###   ########.fr       */
+/*   Updated: 2023/05/22 02:27:11 by ladloff          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void	*ft_realloc(void *ptr, size_t current_size, size_t new_size)
 
 	if (ptr == NULL)
 		return (malloc(new_size));
-	if (new_size == 0 && ptr != NULL)
+	if (new_size == 0)
 	{
 		free(ptr);
 		return (NULL);
