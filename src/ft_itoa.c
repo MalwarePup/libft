@@ -6,7 +6,7 @@
 /*   By: ladloff <ladloff@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/25 20:21:04 by ladloff           #+#    #+#             */
-/*   Updated: 2022/12/27 18:02:00 by ladloff          ###   ########.fr       */
+/*   Updated: 2023/05/22 02:55:14 by ladloff          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,9 @@
 
 static char	*ft_int_to_char(char *str, long nb, int i)
 {
-	const char	digits[10] = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9'};
-
-	str[i--] = '\0';
 	if (nb == 0)
 	{
-		str[0] = 48;
+		str[0] = '0';
 		return (str);
 	}
 	if (nb < 0)
@@ -29,7 +26,7 @@ static char	*ft_int_to_char(char *str, long nb, int i)
 	}
 	while (nb > 0)
 	{
-		str[i--] = digits[nb % 10];
+		str[i--] = (nb % 10) + '0';
 		nb /= 10;
 	}
 	return (str);
@@ -51,6 +48,7 @@ char	*ft_itoa(int n)
 	str = malloc((i + 1) * sizeof(char));
 	if (!str)
 		return (NULL);
-	str = ft_int_to_char(str, n, i);
+	str[i] = '\0';
+	str = ft_int_to_char(str, n, i - 1);
 	return (str);
 }
