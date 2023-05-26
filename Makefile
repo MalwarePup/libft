@@ -6,7 +6,7 @@
 #    By: ladloff <ladloff@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/03 18:56:12 by ladloff           #+#    #+#              #
-#    Updated: 2023/05/25 18:31:50 by ladloff          ###   ########.fr        #
+#    Updated: 2023/05/27 00:44:55 by ladloff          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,8 @@ SRC_PATH		:=	./src
 BUILD_PATH		:=	./build
 INCLUDE_PATH	:=	./include
 
-SRC_FILES		:=	ft_atoi.c \
+SRC_FILES		:=	ft_atof.c \
+					ft_atoi.c \
 					ft_bzero.c \
 					ft_calloc.c \
 					ft_isalnum.c \
