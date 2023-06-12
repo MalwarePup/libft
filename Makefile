@@ -6,7 +6,7 @@
 #    By: ladloff <ladloff@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/03 18:56:12 by ladloff           #+#    #+#              #
-#    Updated: 2023/05/27 00:44:55 by ladloff          ###   ########.fr        #
+#    Updated: 2023/06/12 16:01:26 by ladloff          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -70,14 +70,14 @@ SRC_FILES		:=	ft_atof.c \
 					ft_printf/ft_printf_utils.c \
 					get_next_line/get_next_line.c
 OBJ_FILES		:=	$(patsubst %.c,$(BUILD_PATH)/%.o,$(SRC_FILES))
-INCLUDE_FLAGS	:=	-I $(INCLUDE_PATH)
 
+INCLUDE_FLAGS	:=	-I$(INCLUDE_PATH)
 CFLAGS			:=	-Wall -Wextra -Werror $(INCLUDE_FLAGS)
 
 all: $(NAME)
 
 $(BUILD_PATH)/%.o: $(SRC_PATH)/%.c
-	mkdir -p $(dir $@)
+	@mkdir -p $(dir $@)
 	$(CC) $(CFLAGS) -c $< -o $@
 
 $(NAME): $(OBJ_FILES)
