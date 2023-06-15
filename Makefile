@@ -6,7 +6,7 @@
 #    By: ladloff <ladloff@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/03 18:56:12 by ladloff           #+#    #+#              #
-#    Updated: 2023/06/15 18:34:31 by ladloff          ###   ########.fr        #
+#    Updated: 2023/06/15 18:41:44 by ladloff          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -73,7 +73,7 @@ SRC_FILES		:=	ft_atof.c \
 					get_next_line/get_next_line.c
 OBJ_FILES		:=	$(patsubst %.c,$(BUILD_PATH)/%.o,$(SRC_FILES))
 
-CFLAGS			:=	-Wall -Wextra -Werror -MMD -MP
+CFLAGS			:=	-Wall -Wextra -Werror -Wpedantic -MMD -MP
 CPPFLAGS		:=	-I$(INCLUDE_PATH)
 
 .PHONY: all clean fclean re
