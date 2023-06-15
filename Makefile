@@ -6,7 +6,7 @@
 #    By: ladloff <ladloff@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/03 18:56:12 by ladloff           #+#    #+#              #
-#    Updated: 2023/06/15 18:29:15 by ladloff          ###   ########.fr        #
+#    Updated: 2023/06/15 18:31:16 by ladloff          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -73,14 +73,16 @@ SRC_FILES		:=	ft_atof.c \
 					get_next_line/get_next_line.c
 OBJ_FILES		:=	$(patsubst %.c,$(BUILD_PATH)/%.o,$(SRC_FILES))
 
-INCLUDE_FLAGS	:=	-I$(INCLUDE_PATH)
-CFLAGS			:=	-Wall -Wextra -Werror $(INCLUDE_FLAGS)
+CFLAGS			:=	-Wall -Wextra -Werror
+CPPFLAGS		:=	-I$(INCLUDE_PATH)
+
+.PHONY: all clean fclean re
 
 all: $(NAME)
 
 $(BUILD_PATH)/%.o: $(SRC_PATH)/%.c
 	@mkdir -p $(@D)
-	$(CC) $(CFLAGS) -c $< -o $@
+	$(CC) $(CPPFLAGS) $(CFLAGS) -c $< -o $@
 
 $(NAME): $(OBJ_FILES)
 	$(AR) rcs $(NAME) $(OBJ_FILES)
@@ -93,5 +95,3 @@ fclean: clean
 	$(RM) $(NAME)
 
 re: fclean all
-
-.PHONY: all clean fclean re
