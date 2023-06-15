@@ -6,7 +6,7 @@
 #    By: ladloff <ladloff@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/03 18:56:12 by ladloff           #+#    #+#              #
-#    Updated: 2023/06/15 18:55:56 by ladloff          ###   ########.fr        #
+#    Updated: 2023/06/15 19:39:02 by ladloff          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -67,7 +67,7 @@ SRC_FILES		:=	ft_atof.c \
 					ft_substr.c \
 					ft_tolower.c \
 					ft_toupper.c \
-					ft_uitoa.c \
+					ft_uitoa.c
 OBJ_FILES		:=	$(patsubst %.c,$(BUILD_PATH)/%.o,$(SRC_FILES))
 
 CFLAGS			:=	-Wall -Wextra -Werror -Wpedantic -MMD -MP
