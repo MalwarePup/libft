@@ -6,7 +6,7 @@
 #    By: ladloff <ladloff@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/03 18:56:12 by ladloff           #+#    #+#              #
-#    Updated: 2023/06/15 18:41:44 by ladloff          ###   ########.fr        #
+#    Updated: 2023/06/15 20:26:34 by ladloff          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,9 +14,9 @@ SHELL			:=	/bin/sh
 
 NAME			:=	libft.a
 
-SRC_PATH		:=	./src
-BUILD_PATH		:=	./build
-INCLUDE_PATH	:=	./include
+SRC_DIR		:=	./src
+BUILD_DIR		:=	./build
+INCLUDE_DIR	:=	./include
 
 SRC_FILES		:=	ft_atof.c \
 					ft_atoi.c \
@@ -71,16 +71,16 @@ SRC_FILES		:=	ft_atof.c \
 					ft_printf/ft_printf.c \
 					ft_printf/ft_printf_utils.c \
 					get_next_line/get_next_line.c
-OBJ_FILES		:=	$(patsubst %.c,$(BUILD_PATH)/%.o,$(SRC_FILES))
+OBJ_FILES		:=	$(patsubst %.c,$(BUILD_DIR)/%.o,$(SRC_FILES))
 
 CFLAGS			:=	-Wall -Wextra -Werror -Wpedantic -MMD -MP
-CPPFLAGS		:=	-I$(INCLUDE_PATH)
+CPPFLAGS		:=	-I$(INCLUDE_DIR)
 
 .PHONY: all clean fclean re
 
 all: $(NAME)
 
-$(BUILD_PATH)/%.o: $(SRC_PATH)/%.c
+$(BUILD_DIR)/%.o: $(SRC_DIR)/%.c
 	@mkdir -p $(@D)
 	$(CC) $(CPPFLAGS) $(CFLAGS) -c $< -o $@
 
@@ -91,7 +91,7 @@ $(NAME): $(OBJ_FILES)
 
 clean:
 	$(RM) $(OBJ_FILES)
-	rm -rf $(BUILD_PATH)
+	rm -rf $(BUILD_DIR)
 
 fclean: clean
 	$(RM) $(NAME)
