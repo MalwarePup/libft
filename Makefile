@@ -6,9 +6,11 @@
 #    By: ladloff <ladloff@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/03 18:56:12 by ladloff           #+#    #+#              #
-#    Updated: 2023/06/12 16:01:26 by ladloff          ###   ########.fr        #
+#    Updated: 2023/06/15 18:29:15 by ladloff          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
+
+SHELL			:=	/bin/sh
 
 NAME			:=	libft.a
 
@@ -77,7 +79,7 @@ CFLAGS			:=	-Wall -Wextra -Werror $(INCLUDE_FLAGS)
 all: $(NAME)
 
 $(BUILD_PATH)/%.o: $(SRC_PATH)/%.c
-	@mkdir -p $(dir $@)
+	@mkdir -p $(@D)
 	$(CC) $(CFLAGS) -c $< -o $@
 
 $(NAME): $(OBJ_FILES)
