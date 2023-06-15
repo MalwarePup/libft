@@ -6,7 +6,7 @@
 #    By: ladloff <ladloff@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/03 18:56:12 by ladloff           #+#    #+#              #
-#    Updated: 2023/06/15 18:31:16 by ladloff          ###   ########.fr        #
+#    Updated: 2023/06/15 18:33:04 by ladloff          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -85,7 +85,7 @@ $(BUILD_PATH)/%.o: $(SRC_PATH)/%.c
 	$(CC) $(CPPFLAGS) $(CFLAGS) -c $< -o $@
 
 $(NAME): $(OBJ_FILES)
-	$(AR) rcs $(NAME) $(OBJ_FILES)
+	$(AR) -rcs $(NAME) $(OBJ_FILES)
 
 clean:
 	$(RM) $(OBJ_FILES)
