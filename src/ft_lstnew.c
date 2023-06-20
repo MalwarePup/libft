@@ -6,10 +6,11 @@
 /*   By: ladloff <ladloff@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/26 22:21:00 by ladloff           #+#    #+#             */
-/*   Updated: 2022/10/27 13:58:13 by ladloff          ###   ########.fr       */
+/*   Updated: 2023/06/20 16:35:04 by ladloff          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdlib.h>
 #include "libft.h"
 
 t_list	*ft_lstnew(void *content)

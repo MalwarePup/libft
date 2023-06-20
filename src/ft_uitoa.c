@@ -6,10 +6,11 @@
 /*   By: ladloff <ladloff@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/02 20:23:49 by ladloff           #+#    #+#             */
-/*   Updated: 2023/05/22 02:14:41 by ladloff          ###   ########.fr       */
+/*   Updated: 2023/06/20 16:36:37 by ladloff          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdlib.h>
 #include "libft.h"
 
 char	*ft_uitoa(unsigned int n)

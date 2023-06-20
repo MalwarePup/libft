@@ -6,10 +6,11 @@
 /*   By: ladloff <ladloff@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/09 15:23:06 by ladloff           #+#    #+#             */
-/*   Updated: 2023/05/21 23:40:16 by ladloff          ###   ########.fr       */
+/*   Updated: 2023/06/20 16:36:47 by ladloff          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdlib.h>
 #include <unistd.h>
 #include "ft_printf.h"
 #include "libft.h"

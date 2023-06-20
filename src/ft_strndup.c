@@ -6,10 +6,11 @@
 /*   By: ladloff <ladloff@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/15 13:55:47 by ladloff           #+#    #+#             */
-/*   Updated: 2023/05/15 13:56:00 by ladloff          ###   ########.fr       */
+/*   Updated: 2023/06/20 16:36:01 by ladloff          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdlib.h>
 #include "libft.h"
 
 char	*ft_strndup(const char *s1, size_t n)

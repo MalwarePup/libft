@@ -6,10 +6,11 @@
 /*   By: ladloff <ladloff@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/25 13:46:01 by ladloff           #+#    #+#             */
-/*   Updated: 2023/02/20 13:25:08 by ladloff          ###   ########.fr       */
+/*   Updated: 2023/06/20 16:35:16 by ladloff          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdlib.h>
 #include "libft.h"
 
 static char	**ft_free(char **str)

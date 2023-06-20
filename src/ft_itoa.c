@@ -6,10 +6,11 @@
 /*   By: ladloff <ladloff@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/25 20:21:04 by ladloff           #+#    #+#             */
-/*   Updated: 2023/05/22 02:55:14 by ladloff          ###   ########.fr       */
+/*   Updated: 2023/06/20 16:34:45 by ladloff          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdlib.h>
 #include "libft.h"
 
 static char	*ft_int_to_char(char *str, long nb, int i)

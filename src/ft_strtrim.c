@@ -6,10 +6,11 @@
 /*   By: ladloff <ladloff@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/25 13:26:41 by ladloff           #+#    #+#             */
-/*   Updated: 2023/03/01 00:43:40 by ladloff          ###   ########.fr       */
+/*   Updated: 2023/06/20 16:36:09 by ladloff          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdlib.h>
 #include "libft.h"
 
 static size_t	get_prefix_length(const char *s1, const char *set)
