@@ -6,7 +6,7 @@
 /*   By: ladloff <ladloff@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/19 02:26:01 by ladloff           #+#    #+#             */
-/*   Updated: 2023/05/27 00:43:48 by ladloff          ###   ########.fr       */
+/*   Updated: 2023/06/20 16:26:38 by ladloff          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,6 +52,8 @@ void	*ft_calloc(size_t count, size_t size);
 void	*ft_realloc(void *ptr, size_t current_size, size_t new_size);
 char	*ft_strdup(const char *s1);
 char	*ft_strndup(const char *s1, size_t n);
+char	*ft_strncat(char *dst, const char *src, size_t n);
+size_t	ft_strnlen(const char *str, size_t maxlen);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_strtrim(char const *s1, char const *set);

@@ -6,7 +6,7 @@
 #    By: ladloff <ladloff@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/03 18:56:12 by ladloff           #+#    #+#              #
-#    Updated: 2023/06/15 20:39:07 by ladloff          ###   ########.fr        #
+#    Updated: 2023/06/20 16:25:51 by ladloff          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -59,8 +59,10 @@ SRC_FILES	:=	ft_atof.c \
 				ft_strlcpy.c \
 				ft_strlen.c \
 				ft_strmapi.c \
+				ft_strncat.c \
 				ft_strncmp.c \
 				ft_strndup.c \
+				ft_strnlen.c \
 				ft_strnstr.c \
 				ft_strrchr.c \
 				ft_strtrim.c \
@@ -91,7 +93,6 @@ $(NAME): $(OBJ_FILES)
 	$(AR) -rcs $(NAME) $(OBJ_FILES)
 
 clean:
-	$(RM) $(OBJ_FILES)
 	rm -rf $(BUILD_DIR)
 
 fclean: clean
