@@ -6,7 +6,7 @@
 /*   By: ladloff <ladloff@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/19 02:26:01 by ladloff           #+#    #+#             */
-/*   Updated: 2024/02/02 12:18:50 by ladloff          ###   ########.fr       */
+/*   Updated: 2024/02/09 14:52:27 by ladloff          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,6 +56,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len);
 char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_strjoin1(char *s1, char const *s2);
 char	*ft_strjoin2(char *s1, char *s2);
+char	*ft_strjoin3(char *s1, char *s2);
 char	*ft_strtrim(char const *s1, char const *set);
 char	**ft_split(char const *s, char c);
 char	*ft_itoa(int n);
