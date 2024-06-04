@@ -6,26 +6,14 @@
 /*   By: ladloff <ladloff@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/04 16:09:24 by ladloff           #+#    #+#             */
-/*   Updated: 2023/05/22 02:04:04 by ladloff          ###   ########.fr       */
+/*   Updated: 2024/06/04 11:17:43 by ladloff          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <sys/select.h>
 #include "get_next_line.h"
 
-t_gnl	*free_gnl_node(t_gnl *current)
-{
-	t_gnl	*next;
-
-	if (!current)
-		return (NULL);
-	next = current->next;
-	free(current->buffer);
-	free(current);
-	return (next);
-}
-
-t_gnl	*create_gnl_node(int fd)
+static t_gnl	*create_gnl_node(int fd)
 {
 	t_gnl	*new_node;
 
@@ -103,13 +91,15 @@ static size_t	get_line_size(t_gnl *list, int fd)
 	return (line_size);
 }
 
-char	*get_next_line(int fd)
+char	*get_next_line(int fd, bool free_static)
 {
 	static t_gnl	*list;
 	char			*line;
 	size_t			line_size;
 
-	if (fd < 0 || fd >= FD_SETSIZE)
+	if (free_static)
+		return (free_gnl_list(list), NULL);
+	if (fd < 0)
 		return (NULL);
 	if (!list)
 		list = create_gnl_node(fd);

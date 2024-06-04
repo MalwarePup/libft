@@ -6,7 +6,7 @@
 #    By: ladloff <ladloff@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/03 18:56:12 by ladloff           #+#    #+#              #
-#    Updated: 2023/06/29 17:07:03 by ladloff          ###   ########.fr        #
+#    Updated: 2024/06/04 11:18:59 by ladloff          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -74,7 +74,8 @@ SRC_FILES	:=	ft_atof.c \
 				ft_printf/ft_printf_utils.c \
 				ft_dprintf/ft_dprintf.c \
 				ft_dprintf/ft_dprintf_utils.c \
-				get_next_line/get_next_line.c
+				get_next_line/get_next_line.c \
+				get_next_line/get_next_line_utils.c
 
 OBJ_FILES	:=	$(patsubst %.c,$(BUILD_DIR)/%.o,$(SRC_FILES))
 
