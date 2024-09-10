@@ -6,7 +6,7 @@
 /*   By: ladloff <ladloff@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/15 13:55:47 by ladloff           #+#    #+#             */
-/*   Updated: 2023/06/20 16:36:01 by ladloff          ###   ########.fr       */
+/*   Updated: 2024/09/10 11:51:16 by ladloff          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,6 @@ char	*ft_strndup(const char *s1, size_t n)
 	char	*str;
 	size_t	len;
 
-	if (!s1)
-		return (NULL);
 	len = ft_strlen(s1);
 	if (n < len)
 		len = n;
