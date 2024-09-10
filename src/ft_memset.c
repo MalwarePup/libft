@@ -6,7 +6,7 @@
 /*   By: ladloff <ladloff@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/20 19:21:32 by ladloff           #+#    #+#             */
-/*   Updated: 2022/10/25 21:32:16 by ladloff          ###   ########.fr       */
+/*   Updated: 2024/09/10 11:21:00 by ladloff          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 
 void	*ft_memset(void *b, int c, size_t len)
 {
-	unsigned char	*p_b;
+	unsigned char	*p;
 
-	p_b = b;
+	p = b;
 	while (len--)
-		*p_b++ = c;
+		*p++ = (unsigned char)c;
 	return (b);
 }

@@ -6,14 +6,14 @@
 /*   By: ladloff <ladloff@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/25 20:21:04 by ladloff           #+#    #+#             */
-/*   Updated: 2023/06/20 16:34:45 by ladloff          ###   ########.fr       */
+/*   Updated: 2024/09/10 11:34:12 by ladloff          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include "libft.h"
 
-static char	*ft_int_to_char(char *str, long nb, int i)
+static char	*ft_int_to_char(char *str, long nb, size_t i)
 {
 	if (nb == 0)
 	{
@@ -27,7 +27,7 @@ static char	*ft_int_to_char(char *str, long nb, int i)
 	}
 	while (nb > 0)
 	{
-		str[i--] = (nb % 10) + '0';
+		str[i--] = (char)((nb % 10) + '0');
 		nb /= 10;
 	}
 	return (str);
@@ -35,7 +35,7 @@ static char	*ft_int_to_char(char *str, long nb, int i)
 
 char	*ft_itoa(int n)
 {
-	int		i;
+	size_t	i;
 	int		nb;
 	char	*str;
 

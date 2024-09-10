@@ -6,7 +6,7 @@
 /*   By: ladloff <ladloff@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/01 20:54:11 by ladloff           #+#    #+#             */
-/*   Updated: 2023/05/21 23:40:00 by ladloff          ###   ########.fr       */
+/*   Updated: 2024/09/10 11:32:57 by ladloff          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	ft_format(va_list *ap, const char format, ssize_t *len_args)
 {
 	if (format == 'c')
-		ft_printchar(va_arg(*ap, unsigned int), len_args);
+		ft_printchar((char)va_arg(*ap, unsigned int), len_args);
 	if (format == 's')
 		ft_printstr(va_arg(*ap, char *), len_args);
 	if (format == 'p')

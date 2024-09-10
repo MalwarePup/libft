@@ -6,7 +6,7 @@
 /*   By: ladloff <ladloff@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/19 12:21:17 by ladloff           #+#    #+#             */
-/*   Updated: 2023/04/10 10:51:35 by ladloff          ###   ########.fr       */
+/*   Updated: 2024/09/10 11:24:37 by ladloff          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,14 +24,15 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 		return (ft_strlen(src));
 	if (dstsize < ft_strlen(dst))
 		return (ft_strlen(src) + dstsize);
-	i = -1;
+	i = 0;
 	len_dst = ft_strlen(dst);
 	len_total = ft_strlen(src) + len_dst;
-	while (src[++i] && len_dst + i < dstsize - 1)
+	while (src[i] && len_dst + i < dstsize - 1)
 	{
 		if (!dst)
 			return (0);
 		dst[len_dst + i] = src[i];
+		i++;
 	}
 	if (!dst)
 		return (0);

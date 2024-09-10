@@ -6,7 +6,7 @@
 /*   By: ladloff <ladloff@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/19 03:04:02 by ladloff           #+#    #+#             */
-/*   Updated: 2022/12/29 11:58:52 by ladloff          ###   ########.fr       */
+/*   Updated: 2024/09/10 11:27:52 by ladloff          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,5 +18,5 @@ size_t	ft_strlen(const char *s)
 
 	while (*p)
 		p++;
-	return (p - s);
+	return ((size_t)(p - s));
 }

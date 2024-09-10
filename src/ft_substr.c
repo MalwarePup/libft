@@ -6,7 +6,7 @@
 /*   By: ladloff <ladloff@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/25 11:02:49 by ladloff           #+#    #+#             */
-/*   Updated: 2023/06/20 16:36:28 by ladloff          ###   ########.fr       */
+/*   Updated: 2024/09/10 11:29:42 by ladloff          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,9 +29,12 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	str = malloc((len + 1) * sizeof(char));
 	if (!str)
 		return (NULL);
-	i = -1;
-	while (++i < len)
+	i = 0;
+	while (i < len)
+	{
 		str[i] = s[start + i];
+		i++;
+	}
 	str[i] = '\0';
 	return (str);
 }

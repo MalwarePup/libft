@@ -6,7 +6,7 @@
 /*   By: ladloff <ladloff@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/25 20:40:39 by ladloff           #+#    #+#             */
-/*   Updated: 2022/10/29 12:37:15 by ladloff          ###   ########.fr       */
+/*   Updated: 2024/09/10 11:23:27 by ladloff          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,10 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 
 	if (!s || !f)
 		return ;
-	i = -1;
-	while (s[++i])
+	i = 0;
+	while (s[i])
+	{
 		f(i, &s[i]);
+		i++;
+	}
 }

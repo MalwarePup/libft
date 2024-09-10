@@ -6,7 +6,7 @@
 /*   By: ladloff <ladloff@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/25 13:03:22 by ladloff           #+#    #+#             */
-/*   Updated: 2023/06/20 16:35:39 by ladloff          ###   ########.fr       */
+/*   Updated: 2024/09/10 11:24:20 by ladloff          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,12 +26,18 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	strjoin = malloc((len_total + 1) * sizeof(char));
 	if (!strjoin)
 		return (NULL);
-	i = -1;
-	while (s1[++i])
+	i = 0;
+	while (s1[i])
+	{
 		strjoin[i] = s1[i];
-	j = -1;
-	while (i + ++j < len_total)
+		i++;
+	}
+	j = 0;
+	while (i + j < len_total)
+	{
 		strjoin[i + j] = s2[j];
+		j++;
+	}
 	strjoin[i + j] = '\0';
 	return (strjoin);
 }
