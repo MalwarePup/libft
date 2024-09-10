@@ -6,11 +6,12 @@
 /*   By: ladloff <ladloff@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/27 00:06:34 by ladloff           #+#    #+#             */
-/*   Updated: 2024/09/10 11:57:26 by ladloff          ###   ########.fr       */
+/*   Updated: 2024/09/10 12:04:18 by ladloff          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <math.h>
+#include <stdint.h>
 #include <string.h>
 #include "libft.h"
 
