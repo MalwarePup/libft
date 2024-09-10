@@ -6,7 +6,7 @@
 /*   By: ladloff <ladloff@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/09 15:23:06 by ladloff           #+#    #+#             */
-/*   Updated: 2023/06/29 17:07:37 by ladloff          ###   ########.fr       */
+/*   Updated: 2024/09/10 11:47:29 by ladloff          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void	ft_dprintchar(int fd, char c, ssize_t *len_args)
 	*len_args += write(fd, &c, 1);
 }
 
-void	ft_dprintstr(int fd, char *s, ssize_t *len_args)
+void	ft_dprintstr(int fd, const char *s, ssize_t *len_args)
 {
 	if (!s)
 		*len_args += write(fd, "(null)", 6);

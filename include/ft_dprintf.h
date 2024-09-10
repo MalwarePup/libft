@@ -6,7 +6,7 @@
 /*   By: ladloff <ladloff@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/01 20:50:16 by ladloff           #+#    #+#             */
-/*   Updated: 2023/06/29 17:10:16 by ladloff          ###   ########.fr       */
+/*   Updated: 2024/09/10 11:48:12 by ladloff          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ int		ft_dprintf(int fd, const char *str,
 
 /* ft_dprintf_utils.c */
 void	ft_dprintchar(int fd, char c, ssize_t *len_args);
-void	ft_dprintstr(int fd, char *s, ssize_t *len_args);
+void	ft_dprintstr(int fd, const char *s, ssize_t *len_args);
 void	ft_dprintptr(int fd, unsigned long n, ssize_t *len_args);
 void	ft_dprintdec(int fd, int n, ssize_t *len_args);
 void	ft_dprintudec(int fd, unsigned int n, ssize_t *len_args);
